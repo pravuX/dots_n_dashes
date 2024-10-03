@@ -107,7 +107,7 @@ function check_game_over() {
 }
 
 function draw_dashes() {
-  ctx.lineWidth = 1
+  ctx.lineWidth = 2
   if (player == 0) {
     ctx.strokeStyle = "red"
     ctx.fillStyle = `rgba(255, 0, 0, 0.35)`
