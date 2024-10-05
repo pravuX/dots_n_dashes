@@ -17,6 +17,7 @@ body {
 
 h1 {
   text-decoration: underline wavy 2px;
+  padding: 10px;
 }
 
 #canvas {
@@ -35,7 +36,7 @@ ol {
 li.column {
   flex: 50%;
   font-size: 22px;
-  padding: 5px;
+  padding: 10px;
   text-decoration: underline wavy #f7768e 2px;
 }
 li.two {
@@ -57,8 +58,6 @@ li.two {
   line-height: 50px;
   text-align: center;
   text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
@@ -79,5 +78,10 @@ li.two {
 }
 
 div#result {
-  padding: 10px;
+  padding: 20px;
+}
+
+.prevent-user-selection {
+  -webkit-user-select: none;
+  user-select: none;
 }

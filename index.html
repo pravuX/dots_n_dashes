@@ -7,13 +7,18 @@
     <link href="./styles.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Dots and Dashes</h1>
+    <h1 class="prevent-user-selection">Dots and Dashes</h1>
     <canvas id="canvas" width="800" height="600"></canvas>
-    <ol>
+    <ol class="prevent-user-selection">
       <li class="column one">Red: <span id="score_1">0</span></li>
       <li class="column two">Blue: <span id="score_2">0</span></li>
     </ol>
-    <input type="button" class="btn" id="reload" value="Reset" />
+    <input
+      type="button"
+      class="btn prevent-user-selection"
+      id="reload"
+      value="Reset"
+    />
     <div id="result"></div>
   </body>
   <script type="text/javascript" src="./script.js"></script>
