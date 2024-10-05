@@ -24,5 +24,6 @@ This game works on almost any mobile and computer devices
 
 ## Technologies Used
 
-**HTML** and **CSS\*** for structure and styling of the game
+**HTML** and **CSS** for structure and styling of the game
 **JavaScript** for game logic and interactivity.
+**Netlify** to host the game
