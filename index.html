@@ -4,22 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link href="./styles.css" rel="stylesheet" />
+    <style>
+      form {
+        font: 1em sans-serif;
+        max-width: 130px;
+      }
+      input[type="text"] {
+        width: 100%;
+        border: 1px solid #333;
+        box-sizing: border-box;
+      }
+      input:invalid {
+        box-shadow: 0 0 5px 1px red;
+      }
+      input:focus:invalid {
+        box-shadow: none;
+      }
+      .btn {
+        background-color: #414868;
+        border: 2px solid #a9b1d6;
+        border-radius: 30px;
+        box-shadow: #a9b1d6 4px 4px 0 0;
+        color: #a9b1d6;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 0 18px;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        touch-action: manipulation;
+      }
+
+      .btn:hover {
+        text-decoration: underline wavy #a9b1d6 2px;
+      }
+
+      .btn:active {
+        box-shadow: #a9b1d6 2px 2px 0 0;
+        transform: translate(2px, 2px);
+      }
+    </style>
   </head>
   <body>
-    <h1 class="prevent-user-selection">Dots and Dashes</h1>
-    <canvas id="canvas" width="800" height="600"></canvas>
-    <ol class="prevent-user-selection">
-      <li class="column one">Red: <span id="score_1">0</span></li>
-      <li class="column two">Blue: <span id="score_2">0</span></li>
-    </ol>
-    <input
-      type="button"
-      class="btn prevent-user-selection"
-      id="reload"
-      value="Reset"
-    />
-    <div id="result"></div>
+    <a href="/game">Create Room</a> OR
+
+    <form autocomplete="off" action="/game">
+      <p>
+        <label for="room_id">Enter Room ID:</label>
+        <input type="text" name="room_id" id="room_id" required />
+      </p>
+
+      <input type="submit" value="Join Room" class="btn" />
+    </form>
   </body>
-  <script type="text/javascript" src="./script.js"></script>
 </html>

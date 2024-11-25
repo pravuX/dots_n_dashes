@@ -1,0 +1,9 @@
+{
+  "name": "dots_and_dashes",
+  "description": "game",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.1",
+    "socket.io": "^4.8.0"
+  }
+}

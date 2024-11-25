@@ -6,10 +6,11 @@
 }
 
 body {
+  background-color: #24283b;
   display: grid;
   justify-items: center;
   align-content: center;
-  color: #414868;
+  color: #a9b1d6;
   font-family: "Press Start 2P", system-ui;
   font-weight: 600;
   font-size: 18px;
@@ -21,6 +22,7 @@ h1 {
 }
 
 #canvas {
+  background-color: rgba(65, 72, 104, 0.7);
   border: 1px solid black;
   border-radius: 30px;
   margin: 5px;
@@ -44,11 +46,11 @@ li.two {
 }
 
 .btn {
-  background-color: #fff;
-  border: 2px solid #414868;
+  background-color: #414868;
+  border: 2px solid #a9b1d6;
   border-radius: 30px;
-  box-shadow: #414868 4px 4px 0 0;
-  color: #414868;
+  box-shadow: #a9b1d6 4px 4px 0 0;
+  color: #a9b1d6;
   cursor: pointer;
   display: inline-block;
   font-family: "Press Start 2P", system-ui;
@@ -62,11 +64,11 @@ li.two {
 }
 
 .btn:hover {
-  text-decoration: underline wavy #414868 2px;
+  text-decoration: underline wavy #a9b1d6 2px;
 }
 
 .btn:active {
-  box-shadow: #414868 2px 2px 0 0;
+  box-shadow: #a9b1d6 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
 
@@ -84,4 +86,43 @@ div#result {
 .prevent-user-selection {
   -webkit-user-select: none;
   user-select: none;
+}
+
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.notification {
+  background-color: #414868;
+  border: 2px solid #a9b1d6;
+  border-radius: 10px;
+  box-shadow: #a9b1d6 2px 2px 0 0;
+  color: #a9b1d6;
+
+  padding: 15px;
+  animation: slideIn 0.4s ease;
+  width: 300px;
+}
+
+.notification.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

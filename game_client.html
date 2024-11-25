@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="prevent-user-selection">Dots and Dashes</h1>
+    <canvas id="canvas" width="600" height="800"></canvas>
+    <ol class="prevent-user-selection">
+      <li class="column one">Red: <span id="score_1">0</span></li>
+      <li class="column two">Blue: <span id="score_2">0</span></li>
+    </ol>
+    <input
+      type="button"
+      class="btn prevent-user-selection"
+      id="reload"
+      value="Reset"
+    />
+    <div id="notification-container"></div>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
